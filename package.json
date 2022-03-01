@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start:demo": "NODE_ENV=demo nodemon --watch src src/app.js"
+    "start:demo": "NODE_ENV=demo nodemon --watch src src/app.js",
+    "start:local": "NODE_ENV=local nodemon --watch src src/app.js",
+    "start:development": "NODE_ENV=development nodemon --watch src src/app.js"
   },
   "keywords": [],
   "author": "",
