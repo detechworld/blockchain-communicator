@@ -1,0 +1,21 @@
+{
+  "name": "blockchain-communicator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start:demo": "NODE_ENV=demo nodemon --watch src src/app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@deip/rpc-client": "^1.98.0",
+    "dotenv": "^16.0.0",
+    "eslint": "^8.10.0",
+    "koa": "^2.13.4",
+    "koa-json": "^2.0.2",
+    "koa-router": "^10.1.1",
+    "nodemon": "^2.0.15"
+  }
+}

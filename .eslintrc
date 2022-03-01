@@ -1,0 +1,20 @@
+{
+  "extends": "airbnb-base",
+  "rules": {
+    "no-underscore-dangle": 0,
+    "max-len": ["error", {
+      "code": 120,
+      "tabWidth": 2,
+      "ignoreUrls": true,
+      "ignoreComments": true,
+      "ignoreRegExpLiterals": true,
+      "ignoreStrings": true,
+      "ignoreTemplateLiterals": true,
+      "ignorePattern": "^import .*"
+    }],
+    "camelcase": 0,
+    "no-console": 0,
+    "class-methods-use-this": 0,
+    "no-async-promise-executor": 0
+  }
+}
