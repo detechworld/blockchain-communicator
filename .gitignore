@@ -1,2 +1,7 @@
-# Project exclude paths
-/node_modules/
+.DS_Store
+.vscode
+.idea
+npmrc.txt
+vscode-profile*
+node_modules/
+dist/
