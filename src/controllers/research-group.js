@@ -5,7 +5,7 @@ const getResearchGroup = async (ctx) => {
 
   const researchGroups = await deipRpc.api.getResearchGroupsAsync([externalId]);
   if (!researchGroups[0]) {
-    ctx.throw(404, 'User not found');
+    ctx.throw(404, 'Research Group not found');
   }
 
   ctx.status = 200;
