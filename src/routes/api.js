@@ -12,6 +12,8 @@ const router = new Router();
 
 router.get('/users/:username', userController.getUser);
 
+router.post('/users', userController.createAdminUser);
+
 router.get('/research-groups/:externalId', researchGroupController.getResearchGroup);
 
 router.get('/researches/:externalId', researchController.getResearch);

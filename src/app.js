@@ -1,18 +1,21 @@
 const Koa = require('koa');
-const json = require('koa-json')
-const deipRpc = require('@deip/rpc-client');
+const json = require('koa-json');
+const koaBodyParser = require('koa-bodyparser');
 
 const config = require('./config');
 const apiRouter = require('./routes/api');
 
-console.log(config);
+const initMongo = require('./data-storage/mongo');
+const initBlockchain = require('./data-storage/blockchain');
 
-deipRpc.api.setOptions({ url: config.DEIP_FULL_NODE_URL, reconnectTimeout: 3000 });
-deipRpc.config.set('chain_id', config.CHAIN_ID);
+initMongo();
+initBlockchain();
 
 const app = new Koa();
 
-app.use(json())
+app.use(koaBodyParser());
+app.use(json());
+
 app.use(apiRouter.routes());
 
 app.use(ctx => {
@@ -21,4 +24,5 @@ app.use(ctx => {
 
 app.listen(3004, () => {
   console.log('Running on http://localhost:3004');
+  console.log('Started with config: ', config);
 });
