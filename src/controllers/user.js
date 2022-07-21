@@ -49,7 +49,7 @@ const createUserOperation = (username, userPublicKey, userPrivateKey) => {
 const createTenantOperation = async (tenantName, username) => {
   const { ownerPubkey: publicKey, owner: privateKey } = deipRpc.auth.getPrivateKeys(
     tenantName,
-    tenantName,
+    'DEIP',
     ['owner'],
   );
 
@@ -128,7 +128,6 @@ const createAdmin = async (username, firstName, lastName, tenantId) => {
     tenantId,
   });
 
-
   const researchGroup = new ResearchGroup({
     _id: username,
     description: username,
@@ -194,7 +193,7 @@ const createAdminUser = async (ctx) => {
 
   const { ownerPubkey: userPublicKey, owner: userPrivateKey } = deipRpc.auth.getPrivateKeys(
     username,
-    username,
+    'DEIP',
     ['owner'],
   );
 
