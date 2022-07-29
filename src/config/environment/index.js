@@ -9,6 +9,8 @@ if (env === 'demo') {
   path = '.demo.env';
 } else if (env === 'development') {
   path = '.dev.env';
+} else if (env === 'uac') {
+  path = '.uac.env';
 } else if (env === 'sandbox') {
   path = '.sandbox.env';
 } else if (process.env.USE_CONFIG) {
